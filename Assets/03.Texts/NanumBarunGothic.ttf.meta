@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 743352783af5eee48a849bef142fac6d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: NanumBarunGothic
+  fontNames:
+  - NanumBarunGothic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 83de787019149794f96b38e3ed603164, type: 3}
+  - {fileID: 12800000, guid: 23f36627f9207184e9fba5e69462ade0, type: 3}
+  - {fileID: 12800000, guid: 50b6fa6ca747c994f98f9cc36a4fd475, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
