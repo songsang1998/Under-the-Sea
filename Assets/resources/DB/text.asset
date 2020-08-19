@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f949f45915464b8c42c8ff4fa8229, type: 3}
+  m_Name: text
+  m_EditorClassIdentifier: 
+  SheetName: Tower
+  WorksheetName: text
+  dataArray:
+  - objects: Object_closet_2
+    text: "\uC11C\uB78D\uC744\uC5F4\uC5C8\uB2E4"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_closet_1
+    text: "\uC11C\uB78D\uC744\uC5F4\uC5C8\uB530"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_cloth
+    text: "\uC637\uC744\uCE58\uC6E0\uB2E4"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_scissors
+    text: "\uAC00\uC704\uB97C\uD68D\uB4DD\uD588\uB2E4"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_key
+    text: "\uC5F4\uC1E0\uB97C\uD68D\uB4DD\uD588\uB2E4"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_closet_4
+    text: "\uC637\uC7A5\uC744\uC5F4\uC5C8\uB2E4"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_bedding
+    text: "\uCE68\uAD6C\uB97C \uCE58\uC6E0\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_window
+    text: "\uAD6C\uBA4D\uC774 \uB6A4\uB838\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: "\uC190\uC5D0\uB2FF\uC9C0\uC54A\uB294\uB2E4"
+    itemno: 
+    explanation: 
+  - objects: Object_ceiling
+    text: "\uB85C\uD504\uB97C \uAC78\uC5C8\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: "\uC190\uC5D0\uB2FF\uC9C0\uC54A\uB294\uB2E4"
+    itemno: 
+    explanation: 
+  - objects: Object_hair
+    text: "\uBA38\uB9AC\uCE74\uB77D\uC744 \uD68D\uB4DD\uD588\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: brokenwindow
+    text: "\uCF85"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_bottomhair
+    text: "\uAC00\uC704\uB85C \uBA38\uB9AC\uB97C \uC798\uB790\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: "\uB0B4\uBA38\uB9AC\uCE74\uB77D\uC774\uB2E4. \uC798\uB77C\uB0B4\uACE0\uC2F6\uB2E4"
+    explanation: 
+  - objects: Object_door
+    text: "\uC5F4\uC1E0\uB294 \uBB38\uC5D0 \uB531 \uB9DE\uC558\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: "\uBB38\uC774\uC7A0\uACA8\uC788\uB2E4."
+    explanation: 
+  - objects: Object_hairrope
+    text: "\uBA38\uB9AC\uCE74\uB77D\uC744 \uAF2C\uC544\uC11C \uB85C\uD504\uB85C \uB9CC\uB4E4\uC5C8\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: "\uADF8\uB9BC\uC774\uB2E4."
+    explanation: 
+  - objects: Object_floor
+    text: "\uCE68\uAD6C\uB97C \uB193\uC558\uB2E4"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: "\uBB34\uC5B8\uAC00 \uB193\uC744 \uC218 \uC788\uB294 \uACF5\uAC04\uC774\uB2E4."
+    explanation: 
+  - objects: Quiz1
+    text: "\uB2F5\uC740 148\uC774\uC600\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: "\uC790\uBB3C\uC1E0\uD034\uC988"
+  - objects: Object_keys
+    text: "\uC5F4\uC1E0\uB97C \uD68D\uB4DD\uD588\uB2E42"
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
+  - objects: Object_opendoor
+    text: "\uBB38\uC744\uC5F4\uACE0\uB098\uAC14\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: "\uADF8\uB0E5\uB098\uAC00\uAE30\uC5D0\uB294 \uB108\uBB34\uB192\uB2E4."
+    explanation: "\uD074\uB9AC\uC5B4\uD558\uB294\uBB381"
