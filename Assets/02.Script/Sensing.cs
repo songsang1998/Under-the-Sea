@@ -68,13 +68,17 @@ public class Sensing : MonoBehaviour
     }
     void Event(GameObject who)
     {
+        var singleton = Texts.Instance;
         if (who.name == "normal")
         {
             r = 0;
             if (item == "없음")
             {
                 On(who);
+                singleton.TextOn(who.transform.parent.name);
             }
+           
+           
         }
         else if (who.name == "Item")
         {
@@ -82,8 +86,10 @@ public class Sensing : MonoBehaviour
             if (item == "없음")
             {
                 Itemget(who);
+                singleton.TextOn(who.transform.parent.name);
 
             }
+            
         }
         else if (who.name=="ItemNormal")
         {
@@ -92,8 +98,9 @@ public class Sensing : MonoBehaviour
             {
                 On(who);
                 Itemget(who);
-
+                singleton.TextOn(who.transform.parent.name);
             }
+           
         }
         else if (who.name.Substring(0,4) == "die_")
         {
@@ -111,12 +118,15 @@ public class Sensing : MonoBehaviour
                 {
                     invens.GetComponent<Inventori>().Set();
                 }
+               
+                singleton.TextOn(who.transform.parent.name);
                 item = "없음";
                 itemnumber = -1;
                 for (int i = 0; i < 6; i++)
                 {
                     if (inven[i] == "없음")
                     {
+                       
                         inven[i] = who.transform.parent.name.Replace("Object_", "");
                         if (invens.activeSelf == true)
                         {
@@ -124,7 +134,12 @@ public class Sensing : MonoBehaviour
                         }
                         break;
                     }
+                   
                 }
+            }
+            else if(item=="없음")
+            {
+                singleton.TextItemNo(who.transform.parent.name);
             }
         }
         else if (who.name.Substring(0, 6) == "Image_")
@@ -142,11 +157,12 @@ public class Sensing : MonoBehaviour
                 {
                     clear.SetActive(true);
                 }
+               
             }
             else
             {
                 Debug.Log("NO");
-
+                singleton.TextItemNo(who.transform.parent.name);
             }
         }
         else if (who.name.Substring(0, 7) == "normal,")
@@ -158,10 +174,12 @@ public class Sensing : MonoBehaviour
                 if (item == "없음")
                 {
                     On(who);
+                    singleton.TextOn(who.transform.parent.name);
                 }
             }
             else
             {
+                singleton.TextNo(who.transform.parent.name);
                 Debug.Log("NO");
             }
 
@@ -172,7 +190,7 @@ public class Sensing : MonoBehaviour
             if (who.name.Substring(7) == item)
             {
                 inven[itemnumber] = "없음";
-
+                singleton.TextOn(who.transform.parent.name);
                 if (invens.activeSelf == true)
                 {
                     invens.GetComponent<Inventori>().Set();
@@ -180,6 +198,10 @@ public class Sensing : MonoBehaviour
                 item = "없음";
                 itemnumber = -1;
                 On(who);
+            }
+            else if (item == "없음")
+            {
+                singleton.TextItemNo(who.transform.parent.name);
             }
         }
        
@@ -216,10 +238,16 @@ public class Sensing : MonoBehaviour
                     item = "없음";
                     itemnumber = -1;
                     On(who);
+                    singleton.TextOn(who.transform.parent.name);
+                }
+                else if (item == "없음")
+                {
+                    singleton.TextItemNo(who.transform.parent.name);
                 }
             }
             else
             {
+                singleton.TextNo(who.transform.parent.name);
                 Debug.Log("No");
             }
         }
@@ -257,6 +285,12 @@ public class Sensing : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void TextUps()
+    {
+        var singleton = Texts.Instance;
+        singleton.TextUp();
     }
 
     

@@ -12,11 +12,14 @@ public class Quiz1 : MonoBehaviour{
     // Start is called before the first frame update
     public void clear()
     {
-        if(one.text == "1" && two.text == "4" && three.text == "8")
+        var singleton = Texts.Instance;
+        if (one.text == "1" && two.text == "4" && three.text == "8")
         {
             lock1.SetActive(false);
             lock2.SetActive(true);
             lockUI.SetActive(false);
+            singleton.TextOn("Quiz1");
+
         }
     } 
   
