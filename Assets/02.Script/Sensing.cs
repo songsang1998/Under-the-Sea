@@ -23,7 +23,7 @@ public class Sensing : MonoBehaviour
             inven[i] = "없음";
         }
     }
-
+  
     // Update is called once per frame
     void Update()
     {
@@ -45,6 +45,7 @@ public class Sensing : MonoBehaviour
     }
     void Ray()
     {
+
         if (Input.GetMouseButtonDown(0))
 
         {
@@ -68,6 +69,7 @@ public class Sensing : MonoBehaviour
     }
     void Event(GameObject who)
     {
+        var sm = SoundManager.Instance;
         var singleton = Texts.Instance;
         if (who.name == "normal")
         {
@@ -76,6 +78,7 @@ public class Sensing : MonoBehaviour
             {
                 On(who);
                 singleton.TextOn(who.transform.parent.name);
+                sm.PlaySFX("Click");
             }
            
            
@@ -87,6 +90,7 @@ public class Sensing : MonoBehaviour
             {
                 Itemget(who);
                 singleton.TextOn(who.transform.parent.name);
+                sm.PlaySFX("Click");
 
             }
             
@@ -99,6 +103,7 @@ public class Sensing : MonoBehaviour
                 On(who);
                 Itemget(who);
                 singleton.TextOn(who.transform.parent.name);
+                sm.PlaySFX("Click");
             }
            
         }
@@ -122,6 +127,7 @@ public class Sensing : MonoBehaviour
                 singleton.TextOn(who.transform.parent.name);
                 item = "없음";
                 itemnumber = -1;
+                sm.PlaySFX("Click");
                 for (int i = 0; i < 6; i++)
                 {
                     if (inven[i] == "없음")
@@ -132,13 +138,16 @@ public class Sensing : MonoBehaviour
                         {
                             invens.GetComponent<Inventori>().Set();
                         }
+
                         break;
+
                     }
                    
                 }
             }
             else if(item=="없음")
             {
+                sm.PlaySFX("Boong");
                 singleton.TextItemNo(who.transform.parent.name);
             }
         }
@@ -146,6 +155,7 @@ public class Sensing : MonoBehaviour
         {
             panel.SetActive(true);
             panel.transform.Find(who.name.Substring(6)).gameObject.SetActive(true);
+            sm.PlaySFX("Boong");
         }
         else if (who.name.Substring(0, 6) == "clear,")
         {
@@ -153,8 +163,10 @@ public class Sensing : MonoBehaviour
             string ser = who.name.Substring(6);
             if (null != GameObject.Find(ser))
             {
+
                 if (item == "없음")
                 {
+                    sm.PlaySFX("Click");
                     clear.SetActive(true);
                 }
                
@@ -163,6 +175,7 @@ public class Sensing : MonoBehaviour
             {
                 Debug.Log("NO");
                 singleton.TextItemNo(who.transform.parent.name);
+                sm.PlaySFX("Boong");
             }
         }
         else if (who.name.Substring(0, 7) == "normal,")
@@ -173,6 +186,7 @@ public class Sensing : MonoBehaviour
             {
                 if (item == "없음")
                 {
+                    sm.PlaySFX("Click");
                     On(who);
                     singleton.TextOn(who.transform.parent.name);
                 }
@@ -181,6 +195,7 @@ public class Sensing : MonoBehaviour
             {
                 singleton.TextNo(who.transform.parent.name);
                 Debug.Log("NO");
+                sm.PlaySFX("Boong");
             }
 
         }
@@ -198,10 +213,12 @@ public class Sensing : MonoBehaviour
                 item = "없음";
                 itemnumber = -1;
                 On(who);
+                sm.PlaySFX("Click");
             }
             else if (item == "없음")
             {
                 singleton.TextItemNo(who.transform.parent.name);
+                sm.PlaySFX("Boong");
             }
         }
        
@@ -212,6 +229,7 @@ public class Sensing : MonoBehaviour
             r++;
             if (r == q)
             {
+                 sm.PlaySFX("Click");
                 On(who);
             }
         }
@@ -249,10 +267,11 @@ public class Sensing : MonoBehaviour
             {
                 singleton.TextNo(who.transform.parent.name);
                 Debug.Log("No");
+                sm.PlaySFX("Boong");
             }
         }
 
-
+      
 
     }
 
