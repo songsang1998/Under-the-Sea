@@ -5,16 +5,22 @@ using UnityEngine;
 public class Quiz_flower : MonoBehaviour
 {
     public int a;
-    public int name;
+    public int b;
+    public FlowerManager s;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         a = 0;
+
         Setting();
+
     }
 
     // Update is called once per frame
-    
+    public void Sync(int i)
+    {
+        b = i;
+    }
     void Setting()
     {
         if (a == 0)
@@ -32,11 +38,27 @@ public class Quiz_flower : MonoBehaviour
 
     public void flower()
     {
-        if(name%3==0)
+        if (b + 3 <= 8)
         {
-            if (name - 3 > 0)
+            if (b % 3 != 0)
             {
+                s.Flowers(b + 3-1);
+            }
 
+            if (b % 3 != 2)
+            {
+                s.Flowers(b + 3 + 1);
+            }
+        }
+        if(b-3>=0)
+        {
+            if (b % 3 != 0)
+            {
+                s.Flowers(b - 3 - 1);
+            }
+            if (b % 3 != 2)
+            {
+                s.Flowers(b - 3 + 1);
             }
         }
     }
