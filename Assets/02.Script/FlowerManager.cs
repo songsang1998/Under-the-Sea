@@ -6,31 +6,44 @@ public class FlowerManager : MonoBehaviour
 {
     public List<Quiz_flower> quiz;
     bool clear;
+    bool k;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         for (int i = 1; i <= 9; i++)
         {
 
             quiz.Add(transform.GetChild(i).GetComponent<Quiz_flower>());
-            quiz[i].name = i - 1;
+            //quiz[i].Sync(i);
         }
+
+
         
     }
 
-
+    
 
     
     // Update is called once per frame
     void Update()
     {
+
         for (int i=0; i<=8; i++ )
         {
+            k = true;
             if(quiz[i].a == 1)
             {
-                clear = true;
-                Debug.Log("clear");
+
+
             }
+            else
+            {
+                k = false;
+            }
+        }
+        if (k)
+        {
+            clear = true;
         }
     }
 
