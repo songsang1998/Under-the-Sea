@@ -192,6 +192,17 @@ public class SoundManager : MonoBehaviour
             SFXsource[i].volume = volume;
         }
     }
+ 
+
+
+    
+    // Start is called before the first frame update
+   
+
+   
+
+    
+
 }
 
 
