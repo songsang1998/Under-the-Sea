@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class AudioControl : MonoBehaviour
 {
     string bgmname = "dog";
     string changename = "1";
     int a;
-
+    public float bgm;
+    public float sfx;
+    public Scrollbar bgms;
+    public Scrollbar sfxs;
     public static AudioControl instance;
 
     // Start is called before the first frame update
@@ -32,7 +36,7 @@ public class AudioControl : MonoBehaviour
 
         a = SceneManager.GetActiveScene().buildIndex;
 
-        if (a == 0)
+        if (a >= 0)
         {
             bgmname = "One";
             if (bgmname != changename)
@@ -66,5 +70,6 @@ public class AudioControl : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+     
 }
 
