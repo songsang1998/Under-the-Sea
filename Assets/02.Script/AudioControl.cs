@@ -8,10 +8,8 @@ public class AudioControl : MonoBehaviour
     string bgmname = "dog";
     string changename = "1";
     int a;
-    public float bgm;
-    public float sfx;
-    public Scrollbar bgms;
-    public Scrollbar sfxs;
+   
+  
     public static AudioControl instance;
 
     // Start is called before the first frame update
@@ -38,7 +36,7 @@ public class AudioControl : MonoBehaviour
 
         if (a >= 0)
         {
-            bgmname = "One";
+            bgmname = "LEPHO";
             if (bgmname != changename)
             {
                 Audio1(bgmname);
