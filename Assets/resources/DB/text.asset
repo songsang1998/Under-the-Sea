@@ -148,7 +148,7 @@ MonoBehaviour:
     itemno: "\uACC4\uB2E8\uC774 \uC5C6\uB2E4. \uADF8\uB0E5 \uB0B4\uB824\uAC00\uAE30\uC5D4
       \uB108\uBB34 \uB192\uB2E4."
     explanation: "\uD074\uB9AC\uC5B4\uD558\uB294\uBB381"
-  - objects: 
+  - objects: Object_beddingbottom
     text: "\uC774\uBD88 \uC704\uB85C \uC62C\uB77C\uAC08 \uC218 \uC788\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
