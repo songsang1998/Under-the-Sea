@@ -151,6 +151,10 @@ public class Sensing : MonoBehaviour
                 singleton.TextItemNo(who.transform.parent.name);
             }
         }
+        else if (who.name.Substring(0, 5) == "Text_")
+        {
+            singleton.TextOn(who.transform.parent.name);
+        }
         else if (who.name.Substring(0, 6) == "Image_")
         {
             panel.SetActive(true);
