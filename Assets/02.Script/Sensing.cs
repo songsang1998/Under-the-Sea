@@ -112,6 +112,7 @@ public class Sensing : MonoBehaviour
             r = 0;
             die.SetActive(true);
         }
+        
         else if (who.name.Substring(0, 5) == "Item_")
         {
             r = 0;
@@ -181,6 +182,10 @@ public class Sensing : MonoBehaviour
                 singleton.TextItemNo(who.transform.parent.name);
                 sm.PlaySFX("Boong");
             }
+        }
+        else if (who.name.Substring(0, 6) == "clear.")
+        {
+            clear.SetActive(true);
         }
         else if (who.name.Substring(0, 7) == "normal,")
         {

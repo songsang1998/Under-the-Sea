@@ -44,8 +44,8 @@ MonoBehaviour:
     no: 
     itemno: 
     explanation: 
-  - objects: Object_key
-    text: 
+  - objects: Object_mirror
+    text: "\uB098\uB2E4. \uC880 \uC608\uC058\uC9C0 \uC54A\uB098."
     player: "\uB3C4\uD654"
     next: 0
     no: 
@@ -117,7 +117,7 @@ MonoBehaviour:
     no: 
     itemno: "\uBA4B\uB4DC\uB7EC\uC9C4 \uADF8\uB9BC\uC774\uB2E4."
     explanation: 
-  - objects: Object_floor
+  - objects: Object_empty
     text: "\uCE68\uAD6C\uB97C \uC313\uC544\uB193\uC558\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
     no: 
     itemno: 
     explanation: "\uC313\uC778 \uC774\uBD88 \uD074\uB9AD"
-  - objects: 
+  - objects: Object_openmirror
     text: "\uBA38\uB9AC\uB97C \uC798\uB790\uB2E4. \uC5EC\uC804\uD788 \uC608\uC058\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
@@ -163,14 +163,14 @@ MonoBehaviour:
     itemno: "\uB098\uB2E4. \uC880 \uC608\uC05C \uD3B8\uC774\uB2E4."
     explanation: "\uAC70\uC6B8 \uD074\uB9AD. \uAC00\uC704\uB85C \uBA38\uB9AC \uC798\uB790\uC744
       \uB54C / \uBA38\uB9AC \uC790\uB974\uC9C0 \uC54A\uC558\uC744 \uB54C"
-  - objects: "(\uC5EC\uAE30\uBD80\uD130 3\uB2E8\uACC4)"
+  - objects: Object_floor
     text: "\uBB38\uC774 \uC5C6\uB2E4. \uC5B4\uB5BB\uAC8C \uB0B4\uB824\uAC00\uC9C0?"
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uBC14\uB2E5 \uD074\uB9AD"
-  - objects: 
+  - objects: Object_flowergarden
     text: "\uAF43\uB4E4\uC774 \uC608\uC058\uAC8C \uD53C\uC5B4\uC788\uB2E4. \uD5A5\uC740
       \uB098\uC9C0 \uC54A\uB294\uB2E4."
     player: "\uB3C4\uD654"
@@ -178,21 +178,21 @@ MonoBehaviour:
     no: 
     itemno: 
     explanation: "\uAF43 \uD074\uB9AD"
-  - objects: 
+  - objects: Object_vial
     text: "\uAF43\uBC2D\uC5D0 \uC6EC \uD638\uB9AC\uBCD1?"
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uD638\uB9AC\uBCD1 \uD68D\uB4DD"
-  - objects: 
+  - objects: Object_table
     text: "\uC9C0\uAE08 \uC790\uBA74 \uBABB \uC77C\uC5B4\uB0A0 \uAC83 \uAC19\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uD3C9\uC0C1 \uD074\uB9AD"
-  - objects: 
+  - objects: Object_fox
     text: "\uC7A0\uAE50 \uC274\uAE4C......"
     player: "\uB3C4\uD654"
     next: 0
@@ -200,42 +200,42 @@ MonoBehaviour:
     itemno: 
     explanation: "\uD3C9\uC0C1 5\uBC88 \uD074\uB9AD. \uC5EC\uC6B0\uAC00 \uC7A0\uB4E0
       \uBCF5\uC22D\uC544\uB97C \uAFC0\uAEBD! \uC5D4\uB529"
-  - objects: 
+  - objects: Object_watervial
     text: "\uD22C\uBA85\uD55C \uC561\uCCB4\uB97C \uC5BB\uC5C8\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: "\uC5EC\uC6B0 \uBAA8\uC591\uC758 \uB3D9\uC0C1\uC774\uB2E4."
     explanation: "\uC5EC\uC6B0 \uB3D9\uC0C1_\uBB3C \uD68D\uB4DD"
-  - objects: 
+  - objects: Object_seed
     text: "\uBB34\uC2A8 \uC528\uC557\uC77C\uAE4C?"
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uC528\uC557 \uD68D\uB4DD"
-  - objects: 
+  - objects: Object_flowerpot
     text: "\uD654\uBD84\uC5D0 \uC528\uC557\uC744 \uC2EC\uC5C8\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: "\uC791\uC740 \uD654\uBD84\uC774\uB2E4."
     explanation: "\uD654\uBD84_\uC528\uC557"
-  - objects: 
+  - objects: Object_seedpot
     text: "\uBB3C\uC744 \uC92C\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: "\uC791\uC740 \uD654\uBD84\uC774\uB2E4."
     explanation: "\uD654\uBD84_\uD638\uB9AC\uBCD1"
-  - objects: 
+  - objects: Object_piece
     text: "\uC5B4\uB518\uAC00 \uC4F8 \uB370\uAC00 \uC788\uACA0\uC9C0."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uAE68\uC9C4 \uD654\uBD84(\uD654\uBD84\uC870\uAC01 \uD68D\uB4DD)"
-  - objects: 
+  - objects: Object_firstdoor
     text: "\uC5B4\uB514\uB860\uAC00 \uD5A5\uD558\uB294 \uAE38\uC774 \uB6AB\uB824\uC788\uB2E4.
       \uAE38 \uB05D\uC5D0 \uBE5B\uC774 \uB4E4\uC5B4\uC624\uB294 \uAC8C \uBCF4\uC600\uB2E4."
     player: "\uB3C4\uD654"
@@ -243,21 +243,21 @@ MonoBehaviour:
     no: 
     itemno: "\uC7A0\uACA8\uC788\uB2E4."
     explanation: "\uBB38 1_\uC5F4\uC1E0\uAD6C\uBA4D"
-  - objects: 
+  - objects: Object_seconddoor
     text: "\uBB38\uC774 \uC5F4\uB9B0\uB2E4. \uC548\uC5D0 \uBC84\uC12F\uC774 \uC788\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uBB38 2 \uD074\uB9AD"
-  - objects: 
+  - objects: Object_mushroom
     text: "\uBA39\uC744 \uC218 \uC788\uB294 \uAC74\uAC00?"
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uBB382_\uBC84\uC12F \uD68D\uB4DD"
-  - objects: 
+  - objects: Object_peachflower
     text: "\uC88B\uC740 \uD5A5\uAE30\uAC00 \uB09C\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
@@ -265,52 +265,60 @@ MonoBehaviour:
     itemno: 
     explanation: "\uAF43\uBD09\uC624\uB9AC \uD37C\uC990 \uC644\uC131\uB41C \uBCF5\uC22D\uC544
       \uAF43"
-  - objects: 
+  - objects: Object_thirddoor
     text: "\uBB38\uC744 \uC5F4\uC5C8\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uBB38 3"
-  - objects: 
+  - objects: Object_monster
     text: "\uC774\uAC70\uC9C0!"
     player: "\uAD34\uBB3C"
     next: 0
     no: 
     itemno: "\uCD94\uC6CC!"
     explanation: "\uC791\uC740 \uAD34\uBB3C_\uD654\uBD84 \uC870\uAC01"
-  - objects: 
+  - objects: Object_superman
     text: "\uC774\uAC70\uC9C0!"
     player: "\uAD34\uBB3C"
     next: 0
     no: 
     itemno: "\uBC30\uACE0\uD30C!"
     explanation: "\uC791\uC740 \uAD34\uBB3C_\uBC84\uC12F"
-  - objects: 
+  - objects: Object_full
     text: "\uC774\uAC70\uC9C0!"
     player: "\uAD34\uBB3C"
     next: 0
     no: 
     itemno: "\uADC0\uD55C \uAC78 \uC918!"
     explanation: "\uC791\uC740 \uAD34\uBB3C_\uBCF5\uC22D\uC544\uAF43"
-  - objects: 
-    text: "\uC5B4\uCA4C\uB2E4\uBCF4\uB2C8 \uC5F4\uC1E0\uB97C \uC5BB\uC5C8\uB2E4."
+  - objects: Object_flowerman
+    text: "\uAD34\uBB3C\uC740 \uAF43\uC744 \uBA38\uB9AC\uC5D0 \uAF42\uACE0 \uC0AC\uB77C\uC9C4\uB2E4.
+      \uAD34\uBB3C \uC790\uB9AC\uC5D0 \uC5F4\uC1E0\uAC00 \uB0A8\uC544\uC788\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uC5F4\uC1E0"
-  - objects: 
+  - objects: Object_highdoor
     text: "\uB2E4\uC2DC \uC62C\uB77C\uAC08 \uC0DD\uAC01\uC740 \uC5C6\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uCC9C\uC7A5\uC758 \uBB38"
-  - objects: 
+  - objects: Object_highwindow
     text: "\uC120\uC0DD\uB2D8\uC774 \uC624\uAE30 \uC804\uC5D0 \uBE68\uB9AC \uB098\uAC00\uC790."
     player: "\uB3C4\uD654"
     next: 0
     no: 
     itemno: 
     explanation: "\uCC3D\uBB38"
+  - objects: Object_firstkey
+    text: "\uC5B4\uCA4C\uB2E4 \uBCF4\uB2C8 \uC5F4\uC1E0\uB97C \uC5BB\uC5C8\uB2E4."
+    player: "\uB3C4\uD654"
+    next: 0
+    no: 
+    itemno: 
+    explanation: 
