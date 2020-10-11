@@ -22,6 +22,7 @@ public class Sensing : MonoBehaviour
         {
             inven[i] = "없음";
         }
+        TextUpstory();
     }
   
     // Update is called once per frame
@@ -187,6 +188,7 @@ public class Sensing : MonoBehaviour
         {
             clear.SetActive(true);
         }
+       
         else if (who.name.Substring(0, 7) == "normal,")
         {
             r = 0;
@@ -321,5 +323,9 @@ public class Sensing : MonoBehaviour
         singleton.TextUp();
     }
 
-    
+    public void TextUpstory()
+    {
+        var singleton = Texts1.Instance;
+        singleton.Texts();
+    }
 }
