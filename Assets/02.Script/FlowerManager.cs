@@ -7,6 +7,8 @@ public class FlowerManager : MonoBehaviour
     public List<Quiz_flower> quiz;
     bool clear;
     bool k;
+    public GameObject one;
+    public GameObject two;
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,30 +27,46 @@ public class FlowerManager : MonoBehaviour
 
     
     // Update is called once per frame
-    void Update()
+    void check()
     {
-
+        k = true;
         for (int i=0; i<=8; i++ )
         {
-            k = true;
-            if(quiz[i].a == 1)
+            
+            Debug.Log(i+""+quiz[i].a);
+            if (quiz[i].a == 0)
             {
-
+       
+                if (i!= 4)
+                {
+                    k = false;
+                }
 
             }
-            else
+            else if(quiz[i].a==1)
             {
-                k = false;
+                if (i == 4)
+                {
+                    k = false;
+                }
             }
         }
         if (k)
         {
             clear = true;
         }
+        if (clear == true)
+        {
+            clear = false;
+            one.SetActive(false);
+            two.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 
     public void Flowers(int s)
     {
         quiz[s].reverase();
+        check();
     }
 }

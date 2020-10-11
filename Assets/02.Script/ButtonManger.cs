@@ -7,6 +7,9 @@ public class ButtonManger : MonoBehaviour
     public Quiz_artnumber button;
     string s;
     string clear = "441055441055001663382233822";
+    public GameObject one;
+    public GameObject two;
+    public GameObject Quiz2;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,9 @@ public class ButtonManger : MonoBehaviour
        
         if (s == clear)
         {
-            Debug.Log("대체 뭔짓을하면 이런퍼즐을 만들어주는거야");
+            one.SetActive(false);
+            two.SetActive(true);
+            Quiz2.SetActive(false);
         }
     }
 
