@@ -67,7 +67,8 @@ public class Texts1 : MonoBehaviour
         stroyDB = Resources.Load("DB/story") as story;
         text = GameObject.Find("Canvas").transform.Find("Story").transform.Find("Text").GetComponent<Text>();
         textGameobject = GameObject.Find("Canvas").transform.Find("Story").gameObject;
-        eventSystem = GameObject.Find("EventSystem");     
+        eventSystem = GameObject.Find("EventSystem");
+        Sensing.bool_story = true;
     }
     private void OnEnable()
     {
@@ -91,9 +92,11 @@ public class Texts1 : MonoBehaviour
         
         if (i != 0 && stroyDB.dataArray[i - 1].Explanation == 1)
         {
-
+          
             textGameobject.SetActive(false);
-            
+           
+            Sensing.bool_story = false;
+
         }
         i++;
         

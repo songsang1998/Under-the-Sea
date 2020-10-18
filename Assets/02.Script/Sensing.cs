@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+
+
 public class Sensing : MonoBehaviour
 {
     public string item = "없음";
@@ -14,6 +16,9 @@ public class Sensing : MonoBehaviour
     public GameObject die;
     public int itemnumber = -1;
     int r = 0;
+    public static bool bool_story;
+    public static bool bool_puzzle;
+    public static bool bool_texts;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +33,10 @@ public class Sensing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Ray();
+        
+       
+            Ray();
+        
        
 
     }
@@ -44,26 +52,38 @@ public class Sensing : MonoBehaviour
             invens.GetComponent<Inventori>().Set();
         }
     }
+    public void Imageoff()
+    {
+        bool_puzzle = false;
+    }
     void Ray()
     {
-
-        if (Input.GetMouseButtonDown(0))
-
-        {
-
        
-            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+       
+       if (Input.GetMouseButtonDown(0))
 
-            RaycastHit2D hit =Physics2D.Raycast(pos,Vector2.zero,0f);
-          
-            if (hit.collider != null)
-
+       {
+                Debug.Log(bool_story);
+                Debug.Log(bool_puzzle);
+                Debug.Log(bool_texts);
+            if (bool_story == false && bool_puzzle == false && bool_texts == false)
             {
-                if (!EventSystem.current.IsPointerOverGameObject()){
+                Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 0f);
+
+                if (hit.collider != null)
+
+                {
+                    if (!EventSystem.current.IsPointerOverGameObject())
+                    {
                         Event(hit.collider.gameObject);
-                    Debug.Log(hit.collider.gameObject.name);
+                        Debug.Log(hit.collider.gameObject.name);
+                    }
+
                 }
-               
+
+
             }
 
         }
@@ -79,6 +99,7 @@ public class Sensing : MonoBehaviour
             {
                 On(who);
                 singleton.TextOn(who.transform.parent.name);
+                bool_texts = true;
                 sm.PlaySFX("Click");
             }
            
@@ -91,6 +112,7 @@ public class Sensing : MonoBehaviour
             {
                 Itemget(who);
                 singleton.TextOn(who.transform.parent.name);
+                bool_texts = true;
                 sm.PlaySFX("Click");
 
             }
@@ -104,6 +126,7 @@ public class Sensing : MonoBehaviour
                 On(who);
                 Itemget(who);
                 singleton.TextOn(who.transform.parent.name);
+                bool_texts = true;
                 sm.PlaySFX("Click");
             }
            
@@ -127,6 +150,7 @@ public class Sensing : MonoBehaviour
                 }
                
                 singleton.TextOn(who.transform.parent.name);
+                bool_texts = true;
                 item = "없음";
                 itemnumber = -1;
                 sm.PlaySFX("Click");
@@ -156,9 +180,11 @@ public class Sensing : MonoBehaviour
         else if (who.name.Substring(0, 5) == "Text_")
         {
             singleton.TextOn(who.transform.parent.name);
+            bool_texts = true;
         }
         else if (who.name.Substring(0, 6) == "Image_")
         {
+            bool_puzzle = true;
             panel.SetActive(true);
             panel.transform.Find(who.name.Substring(6)).gameObject.SetActive(true);
             sm.PlaySFX("Boong");
@@ -200,6 +226,8 @@ public class Sensing : MonoBehaviour
                     sm.PlaySFX("Click");
                     On(who);
                     singleton.TextOn(who.transform.parent.name);
+
+                    bool_texts = true;
                 }
             }
             else
@@ -217,6 +245,7 @@ public class Sensing : MonoBehaviour
             {
                 inven[itemnumber] = "없음";
                 singleton.TextOn(who.transform.parent.name);
+                bool_texts = true;
                 if (invens.activeSelf == true)
                 {
                     invens.GetComponent<Inventori>().Set();
@@ -268,6 +297,7 @@ public class Sensing : MonoBehaviour
                     itemnumber = -1;
                     On(who);
                     singleton.TextOn(who.transform.parent.name);
+                    bool_texts = true;
                 }
                 else if (item == "없음")
                 {
@@ -321,11 +351,13 @@ public class Sensing : MonoBehaviour
     {
         var singleton = Texts.Instance;
         singleton.TextUp();
+
     }
 
     public void TextUpstory()
     {
         var singleton = Texts1.Instance;
         singleton.Texts();
+        
     }
 }

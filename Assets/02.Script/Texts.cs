@@ -166,6 +166,7 @@ public class Texts : MonoBehaviour
         {
             Text1.gameObject.SetActive(false);
             StopCoroutine("TypingAction");
+            Sensing.bool_texts = false;
         }
     }
  
