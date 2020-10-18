@@ -63,9 +63,7 @@ public class Sensing : MonoBehaviour
        if (Input.GetMouseButtonDown(0))
 
        {
-                Debug.Log(bool_story);
-                Debug.Log(bool_puzzle);
-                Debug.Log(bool_texts);
+               
             if (bool_story == false && bool_puzzle == false && bool_texts == false)
             {
                 Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -175,6 +173,7 @@ public class Sensing : MonoBehaviour
             {
                 sm.PlaySFX("Boong");
                 singleton.TextItemNo(who.transform.parent.name);
+                bool_texts = true;
             }
         }
         else if (who.name.Substring(0, 5) == "Text_")
@@ -207,6 +206,7 @@ public class Sensing : MonoBehaviour
             {
                 Debug.Log("NO");
                 singleton.TextItemNo(who.transform.parent.name);
+                bool_texts = true;
                 sm.PlaySFX("Boong");
             }
         }
@@ -258,6 +258,7 @@ public class Sensing : MonoBehaviour
             else if (item == "없음")
             {
                 singleton.TextItemNo(who.transform.parent.name);
+                bool_texts = true;
                 sm.PlaySFX("Boong");
             }
         }
@@ -302,11 +303,13 @@ public class Sensing : MonoBehaviour
                 else if (item == "없음")
                 {
                     singleton.TextItemNo(who.transform.parent.name);
+                    bool_texts = true;
                 }
             }
             else
             {
                 singleton.TextNo(who.transform.parent.name);
+                bool_texts = true;
                 Debug.Log("No");
                 sm.PlaySFX("Boong");
             }
