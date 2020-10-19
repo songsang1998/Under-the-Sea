@@ -80,15 +80,26 @@ public class Texts : MonoBehaviour
             return;
 
         }
+        
+        TextDB = Resources.Load("DB/text") as text;
         Text1 = GameObject.Find("Canvas").transform.Find("speaking").gameObject;
 
         player = Text1.transform.Find("name").GetComponent<Text>();
         script = Text1.transform.Find("speaking").GetComponent<Text>();
-        TextDB = Resources.Load("DB/text") as text;
-       
         DontDestroyOnLoad(gameObject);
     }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Text1 = GameObject.Find("Canvas").transform.Find("speaking").gameObject;
 
+        player = Text1.transform.Find("name").GetComponent<Text>();
+        script = Text1.transform.Find("speaking").GetComponent<Text>();
+
+    }
     public void TextOn(string objectname)
     {
         
