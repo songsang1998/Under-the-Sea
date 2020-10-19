@@ -87,6 +87,7 @@ public class Texts1 : MonoBehaviour
         {
             SceneManager.LoadScene(2);
             eventSystem.SetActive(false);
+            Sensing.bool_story = false;
         }
         text.text = stroyDB.dataArray[i].Texts;
         

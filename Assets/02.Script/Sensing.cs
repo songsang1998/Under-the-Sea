@@ -36,7 +36,7 @@ public class Sensing : MonoBehaviour
         
        
             Ray();
-        
+           
        
 
     }
@@ -63,7 +63,10 @@ public class Sensing : MonoBehaviour
        if (Input.GetMouseButtonDown(0))
 
        {
-               
+
+            print(bool_puzzle);
+            print(bool_story);
+            print(bool_texts);
             if (bool_story == false && bool_puzzle == false && bool_texts == false)
             {
                 Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -199,6 +202,7 @@ public class Sensing : MonoBehaviour
                 {
                     sm.PlaySFX("Click");
                     clear.SetActive(true);
+                    bool_story = true;
                 }
                
             }
