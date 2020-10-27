@@ -85,7 +85,7 @@ public class Texts1 : MonoBehaviour
     {
         if (i == 8)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
             eventSystem.SetActive(false);
             Sensing.bool_story = false;
         }

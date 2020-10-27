@@ -8,7 +8,7 @@ public class MainScenemove : MonoBehaviour
     // Start is called before the first frame update
     public void Scenemove()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void QuitGame()
     {

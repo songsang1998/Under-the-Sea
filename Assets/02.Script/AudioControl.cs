@@ -34,7 +34,7 @@ public class AudioControl : MonoBehaviour
 
         a = SceneManager.GetActiveScene().buildIndex;
         
-        if (a >= 0)
+        if (a >= 1)
         {
             bgmname = "LEPHO";
             if (bgmname != changename)
