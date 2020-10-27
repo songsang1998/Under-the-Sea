@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
+using UnityEngine.SceneManagement;
 
 
 public class Sensing : MonoBehaviour
@@ -114,7 +114,7 @@ public class Sensing : MonoBehaviour
                 Itemget(who);
                 singleton.TextOn(who.transform.parent.name);
                 bool_texts = true;
-                sm.PlaySFX("Click");
+               
 
             }
             
@@ -128,7 +128,7 @@ public class Sensing : MonoBehaviour
                 Itemget(who);
                 singleton.TextOn(who.transform.parent.name);
                 bool_texts = true;
-                sm.PlaySFX("Click");
+                
             }
            
         }
@@ -136,6 +136,8 @@ public class Sensing : MonoBehaviour
         {
             r = 0;
             die.SetActive(true);
+            sm.PlaySFX("die2");
+
         }
         
         else if (who.name.Substring(0, 5) == "Item_")
@@ -148,13 +150,14 @@ public class Sensing : MonoBehaviour
                 if (invens.activeSelf == true)
                 {
                     invens.GetComponent<Inventori>().Set();
+                    sm.PlaySFX("Item");
                 }
                
                 singleton.TextOn(who.transform.parent.name);
                 bool_texts = true;
                 item = "없음";
                 itemnumber = -1;
-                sm.PlaySFX("Click");
+             
                 for (int i = 0; i < 6; i++)
                 {
                     if (inven[i] == "없음")
@@ -164,6 +167,7 @@ public class Sensing : MonoBehaviour
                         if (invens.activeSelf == true)
                         {
                             invens.GetComponent<Inventori>().Set();
+
                         }
 
                         break;
@@ -189,7 +193,7 @@ public class Sensing : MonoBehaviour
             bool_puzzle = true;
             panel.SetActive(true);
             panel.transform.Find(who.name.Substring(6)).gameObject.SetActive(true);
-            sm.PlaySFX("Boong");
+            sm.PlaySFX("Image");
         }
         else if (who.name.Substring(0, 6) == "clear,")
         {
@@ -253,11 +257,13 @@ public class Sensing : MonoBehaviour
                 if (invens.activeSelf == true)
                 {
                     invens.GetComponent<Inventori>().Set();
+                    sm.PlaySFX("Item");
                 }
                 item = "없음";
                 itemnumber = -1;
                 On(who);
-                sm.PlaySFX("Click");
+               
+
             }
             else if (item == "없음")
             {
@@ -272,9 +278,10 @@ public class Sensing : MonoBehaviour
 
             int q = int.Parse(who.name.Substring(7));
             r++;
+            sm.PlaySFX("beef");
             if (r == q)
             {
-                 sm.PlaySFX("Click");
+                
                 On(who);
             }
         }
@@ -297,6 +304,7 @@ public class Sensing : MonoBehaviour
                     if (invens.activeSelf == true)
                     {
                         invens.GetComponent<Inventori>().Set();
+                        sm.PlaySFX("Item");
                     }
                     item = "없음";
                     itemnumber = -1;
@@ -308,6 +316,7 @@ public class Sensing : MonoBehaviour
                 {
                     singleton.TextItemNo(who.transform.parent.name);
                     bool_texts = true;
+                    sm.PlaySFX("Boong");
                 }
             }
             else
@@ -336,6 +345,8 @@ public class Sensing : MonoBehaviour
 
     void Itemget(GameObject who)
     {
+        var sm = SoundManager.Instance;
+        sm.PlaySFX("Itemget");
         if (who.activeSelf == true)
         {
             who.SetActive(false);

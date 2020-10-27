@@ -753,13 +753,13 @@ MonoBehaviour:
   BGMs:
   - {fileID: 8300000, guid: 12749381b0d1f544a8222a163e796c58, type: 3}
   SFXs:
-  - {fileID: 8300000, guid: fb9abc19d8987b7428597d3b6f98ee95, type: 3}
+  - {fileID: 8300000, guid: 9bf1e70606d0025429295ad2f2103eab, type: 3}
   - {fileID: 8300000, guid: 8ea78272241c69841bf7929ec5cc7ea3, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: af4ba5a221be2014f9a2922df93f74bc, type: 3}
+  - {fileID: 8300000, guid: 21bfcb892595b3a43a5e4ed0c2d01676, type: 3}
+  - {fileID: 8300000, guid: 51069749fd01b47469b0614a44e1bae4, type: 3}
+  - {fileID: 8300000, guid: 8f41b89c47096a046afb41c137347646, type: 3}
+  - {fileID: 8300000, guid: 9aa20179cf823f34a9ea41a0c36322aa, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2357,12 +2357,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
