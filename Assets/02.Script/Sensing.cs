@@ -19,6 +19,8 @@ public class Sensing : MonoBehaviour
     public static bool bool_story;
     public static bool bool_puzzle;
     public static bool bool_texts;
+
+    ParticleSystem r1;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Sensing : MonoBehaviour
         {
             inven[i] = "없음";
         }
+        r1 = GameObject.Find("FX_recover_01").GetComponent<ParticleSystem>();
         TextUpstory();
     }
   
@@ -67,12 +70,13 @@ public class Sensing : MonoBehaviour
             print(bool_puzzle);
             print(bool_story);
             print(bool_texts);
+            
             if (bool_story == false && bool_puzzle == false && bool_texts == false)
             {
                 Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+                r1.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 0f);
-
+                r1.Play();
                 if (hit.collider != null)
 
                 {
