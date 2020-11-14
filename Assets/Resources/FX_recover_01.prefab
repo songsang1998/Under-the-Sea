@@ -4767,7 +4767,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d5474d33ae4f984798b5eabf4ccda8f, type: 2}
+  - {fileID: 2100000, guid: 42f21d20fe01ae44999fc4c17b18c92f, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -9579,7 +9579,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d5474d33ae4f984798b5eabf4ccda8f, type: 2}
+  - {fileID: 2100000, guid: 42f21d20fe01ae44999fc4c17b18c92f, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -14391,7 +14391,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7b1d7f632b3ac6c46b688911b5019cd4, type: 2}
+  - {fileID: 2100000, guid: ffc8fbfaa0efcf94ab2a0801f39d7974, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -19203,7 +19203,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a18859fa79b2d974fa6ff853b729db85, type: 2}
+  - {fileID: 2100000, guid: b989b560d358a1a40b045776474c7755, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -24015,7 +24015,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277b66cde004bd040859ab67c965fbfa, type: 2}
+  - {fileID: 2100000, guid: 7a0e0bfdc9d09264b943fefe80b4198d, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -28827,7 +28827,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d5474d33ae4f984798b5eabf4ccda8f, type: 2}
+  - {fileID: 2100000, guid: 42f21d20fe01ae44999fc4c17b18c92f, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -33607,7 +33607,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1518124463
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 30
   m_RenderMode: 0
   m_SortMode: 0
