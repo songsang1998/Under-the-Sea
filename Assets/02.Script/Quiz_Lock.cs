@@ -7,11 +7,13 @@ public class Quiz_Lock : MonoBehaviour
     // Start is called before the first frame update
     public int number;
     public List<Sprite> so;
+    Quiz1 quiz;
     Image main;
     void Start()
     {
         main = GetComponent<Image>();
-         number=0;
+        quiz = GameObject.Find("QuizManager").GetComponent<Quiz1>();
+        number =0;
         Setting();
     }
 
@@ -45,6 +47,6 @@ public class Quiz_Lock : MonoBehaviour
 
 
         main.sprite = so[number];
-        
+        quiz.clear();
     }
 }

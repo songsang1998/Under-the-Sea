@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class Quiz1 : MonoBehaviour{
-    public Text one;
-    public Text two;
-    public Text three;
+    public Quiz_Lock one;
+    public Quiz_Lock two;
+    public Quiz_Lock three;
     public GameObject lock1;
     public GameObject lock2;
     public GameObject lockUI;
@@ -13,7 +13,7 @@ public class Quiz1 : MonoBehaviour{
     public void clear()
     {
         var singleton = Texts.Instance;
-        if (one.text == "1" && two.text == "4" && three.text == "8")
+        if (one.number == 0 && two.number == 3 && three.number == 7)
         {
             lock1.SetActive(false);
             lock2.SetActive(true);

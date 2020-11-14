@@ -96,11 +96,11 @@ MonoBehaviour:
     itemno: 
     explanation: 
   - objects: Object_bottomhair
-    text: "\uC2DC\uCEE4\uBA53\uACE0 \uAE34, \uB0B4 \uBA38\uB9AC\uCE74\uB77D\uC774\uB2E4."
+    text: "\uBA38\uB9AC\uB97C \uC798\uB790\uB2E4. \uC5EC\uC804\uD788 \uC608\uC058\uB2E4."
     player: "\uB3C4\uD654"
     next: 0
     no: 
-    itemno: 
+    itemno: "\uC2DC\uCEE4\uBA53\uACE0 \uAE34, \uB0B4 \uBA38\uB9AC\uCE74\uB77D\uC774\uB2E4."
     explanation: "\uBA38\uB9AC\uCE74\uB77D \uD68D\uB4DD!"
   - objects: Object_door
     text: "\uC5F4\uC1E0\uB294 \uBB38\uC5D0 \uB531 \uB9DE\uC558\uB2E4."

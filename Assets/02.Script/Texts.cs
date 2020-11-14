@@ -94,10 +94,13 @@ public class Texts : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Text1 = GameObject.Find("Canvas").transform.Find("speaking").gameObject;
+        if (scene.name != "Title_Scene")
+        {
+            Text1 = GameObject.Find("Canvas").transform.Find("speaking").gameObject;
 
-        player = Text1.transform.Find("name").GetComponent<Text>();
-        script = Text1.transform.Find("speaking").GetComponent<Text>();
+            player = Text1.transform.Find("name").GetComponent<Text>();
+            script = Text1.transform.Find("speaking").GetComponent<Text>();
+        }
 
     }
     public void TextOn(string objectname)

@@ -76,9 +76,11 @@ public class Texts1 : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        text = GameObject.Find("Canvas").transform.Find("Story").transform.Find("Text").GetComponent<Text>();
-        textGameobject = GameObject.Find("Canvas").transform.Find("Story").gameObject;
-       
+        if (scene.name != "Title_Scene")
+        {
+            text = GameObject.Find("Canvas").transform.Find("Story").transform.Find("Text").GetComponent<Text>();
+            textGameobject = GameObject.Find("Canvas").transform.Find("Story").gameObject;
+        }
     }
         // Update is called once per frame
     public void Texts()
