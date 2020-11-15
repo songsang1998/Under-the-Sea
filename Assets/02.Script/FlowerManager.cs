@@ -12,7 +12,7 @@ public class FlowerManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        for (int i = 1; i <= 9; i++)
+        for (int i = 2; i <= 10; i++)
         {
 
             quiz.Add(transform.GetChild(i).GetComponent<Quiz_flower>());
