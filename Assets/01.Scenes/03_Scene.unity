@@ -9257,10 +9257,10 @@ MonoBehaviour:
   - 
   - 
   - 
-  invens: {fileID: 0}
+  invens: {fileID: 269338470}
   panel: {fileID: 2126585841}
-  clear: {fileID: 0}
-  die: {fileID: 0}
+  clear: {fileID: 203509848}
+  die: {fileID: 2001440966}
   itemnumber: -1
 --- !u!4 &861427560
 Transform:
