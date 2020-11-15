@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4149930613287372451}
   - component: {fileID: -7070839776003162581}
   m_Layer: 5
-  m_Name: key
+  m_Name: peachflower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,8 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5650863352427679449, guid: 9413278563b301f4b9a61e725857e4a9,
-    type: 3}
+  m_Sprite: {fileID: 888496813269818976, guid: e82b33f0d13a16a4f96cd6e65380b007, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
